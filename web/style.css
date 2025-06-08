@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+#game-container {
+  display: inline-block;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  grid-template-rows: repeat(5, 60px);
+  gap: 5px;
+}
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  font-size: 24px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  user-select: none;
+}
+.tile.blank {
+  background-color: #fff;
+  cursor: default;
+}
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* Difference highlighting: positive = current > target (overshoot), negative = undershoot, zero = match */
+.label.diff-positive {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+.label.diff-negative {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+.label.diff-zero {
+  background-color: #d4edda;
+  color: #155724;
+}
